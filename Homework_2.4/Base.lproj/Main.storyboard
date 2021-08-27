@@ -43,6 +43,7 @@
                                         <state key="normal" title="Let's start!">
                                             <color key="titleColor" systemColor="linkColor"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.59574192880794707" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-67-f2t" userLabel="reminderButtonsStack">
@@ -77,6 +78,9 @@
                             <constraint firstItem="ac1-Ds-R1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vXX-sj-LG8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="letsStartButton" destination="qG8-71-30L" id="WRG-5F-ttu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
