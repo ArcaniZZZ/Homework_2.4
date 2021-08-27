@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kz0-lh-Oio">
-                                <rect key="frame" x="16" y="188.5" width="288" height="191"/>
+                                <rect key="frame" x="16" y="193.5" width="288" height="181"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-x3-WdS" userLabel="textFieldsStack">
                                         <rect key="frame" x="16" y="0.0" width="256" height="87"/>
@@ -37,17 +37,19 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qG8-71-30L">
-                                        <rect key="frame" x="101" y="107" width="86" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qG8-71-30L">
+                                        <rect key="frame" x="87" y="107" width="114" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         <size key="titleShadowOffset" width="0.0" height="1"/>
                                         <state key="normal" title="Let's start!">
-                                            <color key="titleColor" systemColor="linkColor"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.59574192880794707" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.52682636589403975" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-67-f2t" userLabel="reminderButtonsStack">
-                                        <rect key="frame" x="4" y="161" width="280" height="30"/>
+                                        <rect key="frame" x="4" y="151" width="280" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-hI-c2R">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
@@ -80,6 +82,8 @@
                     </view>
                     <connections>
                         <outlet property="letsStartButton" destination="qG8-71-30L" id="WRG-5F-ttu"/>
+                        <outlet property="remindPasswordButton" destination="ppq-XE-CvN" id="JfB-cA-oAg"/>
+                        <outlet property="remindUsernameButton" destination="CKB-hI-c2R" id="chV-eF-dIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,9 +93,6 @@
     </scenes>
     <resources>
         <image name="IMAGE 2021-08-27 20:00:44" width="360" height="640"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
