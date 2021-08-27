@@ -8,59 +8,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework_2_4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="Homework_2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-x3-WdS" userLabel="textFieldsStack">
-                                <rect key="frame" x="16" y="100" width="288" height="87"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMAGE 2021-08-27 20:00:44" translatesAutoresizingMaskIntoConstraints="NO" id="ac1-Ds-R1P">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kz0-lh-Oio">
+                                <rect key="frame" x="16" y="188.5" width="288" height="191"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="raw-8m-E5P">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-oI-eSy">
-                                        <rect key="frame" x="0.0" y="53" width="288" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qG8-71-30L">
-                                <rect key="frame" x="113" y="217" width="94" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Let's start!"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-67-f2t" userLabel="reminderButtonsStack">
-                                <rect key="frame" x="16" y="283" width="288" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-hI-c2R">
-                                        <rect key="frame" x="0.0" y="0.0" width="129" height="30"/>
-                                        <state key="normal" title="Forgot username?"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-x3-WdS" userLabel="textFieldsStack">
+                                        <rect key="frame" x="16" y="0.0" width="256" height="87"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="raw-8m-E5P">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-oI-eSy">
+                                                <rect key="frame" x="0.0" y="53" width="256" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qG8-71-30L">
+                                        <rect key="frame" x="101" y="107" width="86" height="34"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="Let's start!">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.59574192880794707" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppq-XE-CvN">
-                                        <rect key="frame" x="159" y="0.0" width="129" height="30"/>
-                                        <state key="normal" title="Forgot password?"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-67-f2t" userLabel="reminderButtonsStack">
+                                        <rect key="frame" x="4" y="161" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-hI-c2R">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                                <state key="normal" title="Forgot username?"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppq-XE-CvN">
+                                                <rect key="frame" x="155" y="0.0" width="125" height="30"/>
+                                                <state key="normal" title="Forgot password?"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="UJi-x3-WdS" firstAttribute="leading" secondItem="kz0-lh-Oio" secondAttribute="leading" constant="16" id="Y4u-jC-Evw"/>
+                                    <constraint firstAttribute="trailing" secondItem="UJi-x3-WdS" secondAttribute="trailing" constant="16" id="iEb-Cj-tpa"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UJi-x3-WdS" secondAttribute="trailing" constant="16" id="8IK-FJ-gNO"/>
-                            <constraint firstItem="UJi-x3-WdS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="JEq-da-bFK"/>
-                            <constraint firstItem="qG8-71-30L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P3Q-jI-LQc"/>
-                            <constraint firstAttribute="trailing" secondItem="vZb-67-f2t" secondAttribute="trailing" constant="16" id="PMZ-rQ-h3H"/>
-                            <constraint firstItem="qG8-71-30L" firstAttribute="top" secondItem="UJi-x3-WdS" secondAttribute="bottom" constant="30" id="jGK-QB-mQm"/>
-                            <constraint firstItem="vZb-67-f2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="mdh-bh-0ai"/>
-                            <constraint firstItem="UJi-x3-WdS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rWN-mC-yfr"/>
-                            <constraint firstItem="vZb-67-f2t" firstAttribute="top" secondItem="qG8-71-30L" secondAttribute="bottom" constant="30" id="um9-SV-O7m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kz0-lh-Oio" secondAttribute="trailing" constant="16" id="0uF-8J-MQ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ac1-Ds-R1P" secondAttribute="trailing" id="0wc-l6-R6k"/>
+                            <constraint firstAttribute="bottom" secondItem="ac1-Ds-R1P" secondAttribute="bottom" id="ByT-2W-L0K"/>
+                            <constraint firstItem="kz0-lh-Oio" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dkl-AJ-0Js"/>
+                            <constraint firstItem="kz0-lh-Oio" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Rx8-eX-ymu"/>
+                            <constraint firstItem="ac1-Ds-R1P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cYm-70-oUT"/>
+                            <constraint firstItem="ac1-Ds-R1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vXX-sj-LG8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -70,6 +84,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMAGE 2021-08-27 20:00:44" width="360" height="640"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
