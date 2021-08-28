@@ -58,6 +58,7 @@
 		EA65724F26D940F80096AFBD /* Homework_2.4 */ = {
 			isa = PBXGroup;
 			children = (
+				EAC58B8226DAA73A0052C549 /* Models */,
 				EAC58B7E26DAA4EF0052C549 /* ViewControllers */,
 				EAC58B7F26DAA5060052C549 /* Storyboards */,
 				EAC58B8026DAA51B0052C549 /* Assets */,
@@ -100,6 +101,13 @@
 				EA65725E26D940FA0096AFBD /* Info.plist */,
 			);
 			path = Miscelaneous;
+			sourceTree = "<group>";
+		};
+		EAC58B8226DAA73A0052C549 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
