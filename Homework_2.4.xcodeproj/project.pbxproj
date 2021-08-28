@@ -13,6 +13,7 @@
 		EA65725826D940F80096AFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA65725626D940F80096AFBD /* Main.storyboard */; };
 		EA65725A26D940FA0096AFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA65725926D940FA0096AFBD /* Assets.xcassets */; };
 		EA65725D26D940FA0096AFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA65725B26D940FA0096AFBD /* LaunchScreen.storyboard */; };
+		EAC58B7D26DA76190052C549 /* GreetingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC58B7C26DA76190052C549 /* GreetingScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EA65725926D940FA0096AFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA65725C26D940FA0096AFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA65725E26D940FA0096AFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC58B7C26DA76190052C549 /* GreetingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				EA65725226D940F80096AFBD /* SceneDelegate.swift */,
 				EA65725426D940F80096AFBD /* LoginPageViewController.swift */,
 				EA65725626D940F80096AFBD /* Main.storyboard */,
+				EAC58B7C26DA76190052C549 /* GreetingScreenViewController.swift */,
 				EA65725926D940FA0096AFBD /* Assets.xcassets */,
 				EA65725B26D940FA0096AFBD /* LaunchScreen.storyboard */,
 				EA65725E26D940FA0096AFBD /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA65725526D940F80096AFBD /* LoginPageViewController.swift in Sources */,
+				EAC58B7D26DA76190052C549 /* GreetingScreenViewController.swift in Sources */,
 				EA65725126D940F80096AFBD /* AppDelegate.swift in Sources */,
 				EA65725326D940F80096AFBD /* SceneDelegate.swift in Sources */,
 			);
