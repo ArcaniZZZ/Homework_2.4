@@ -29,6 +29,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="34"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.77361858443708609" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jvE-7K-J8y"/>
@@ -121,45 +122,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-yz-cI7">
-                                <rect key="frame" x="110" y="262" width="100" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Log out!"/>
-                                <connections>
-                                    <segue destination="Y6p-NR-02F" kind="unwind" unwindAction="unwindFor:" id="A2B-4A-2wk"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-sY-hgb">
-                                <rect key="frame" x="16" y="127.5" width="288" height="74.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMAGE 2021-08-27 20:00:44" id="bm0-hW-U9c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Kb-tDe">
+                                <rect key="frame" x="102.5" y="206.5" width="115" height="155"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77l-0z-PRh">
-                                        <rect key="frame" x="122" y="0.0" width="44.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-RH-kkt">
-                                        <rect key="frame" x="126.5" y="37.5" width="35" height="37"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-sY-hgb">
+                                        <rect key="frame" x="19" y="0.0" width="77" height="89"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77l-0z-PRh">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-RH-kkt">
+                                                <rect key="frame" x="21.5" y="53" width="34" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-yz-cI7">
+                                        <rect key="frame" x="0.0" y="107" width="115" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Log out!"/>
+                                        <connections>
+                                            <segue destination="Y6p-NR-02F" kind="unwind" unwindAction="unwindFor:" id="A2B-4A-2wk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l3v-ns-NcQ"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="VDr-yz-cI7" firstAttribute="top" secondItem="pUY-sY-hgb" secondAttribute="bottom" constant="60" id="5hm-6Y-wwu"/>
-                            <constraint firstItem="l3v-ns-NcQ" firstAttribute="trailing" secondItem="pUY-sY-hgb" secondAttribute="trailing" constant="16" id="JNm-hS-sqc"/>
-                            <constraint firstItem="VDr-yz-cI7" firstAttribute="centerY" secondItem="cUZ-4q-UJ3" secondAttribute="centerY" id="Jwo-sj-t9W"/>
-                            <constraint firstItem="VDr-yz-cI7" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="eeg-ZQ-RAY"/>
-                            <constraint firstItem="pUY-sY-hgb" firstAttribute="leading" secondItem="l3v-ns-NcQ" secondAttribute="leading" constant="16" id="uKL-ob-CEK"/>
-                            <constraint firstItem="pUY-sY-hgb" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="xuL-S9-wBc"/>
+                            <constraint firstItem="eVE-Kb-tDe" firstAttribute="centerY" secondItem="cUZ-4q-UJ3" secondAttribute="centerY" id="4Ob-Ye-cjg"/>
+                            <constraint firstItem="eVE-Kb-tDe" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="nOd-lD-jsQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greetingUserLabel" destination="77l-0z-PRh" id="Yos-ht-ugZ"/>
+                        <outlet property="logOutButton" destination="VDr-yz-cI7" id="Jae-DS-Ma6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6T-eP-vhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
