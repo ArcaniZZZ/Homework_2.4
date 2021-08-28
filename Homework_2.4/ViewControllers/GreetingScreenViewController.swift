@@ -13,7 +13,7 @@ class GreetingScreenViewController: UIViewController {
     @IBOutlet var greetingUserLabel: UILabel!
     @IBOutlet var logOutButton: UIButton!
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
     var username = ""
     
     // MARK: - Overriden functions
