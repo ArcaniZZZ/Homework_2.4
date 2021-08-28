@@ -25,18 +25,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-x3-WdS" userLabel="textFieldsStack">
                                         <rect key="frame" x="16" y="0.0" width="256" height="88"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="raw-8m-E5P">
+                                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="raw-8m-E5P">
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="34"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.77361858443708609" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jvE-7K-J8y"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-oI-eSy">
+                                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-oI-eSy">
                                                 <rect key="frame" x="0.0" y="54" width="256" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="0.77361858443708609" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oD8-AB-BNc"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -51,8 +57,8 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
                                         </state>
                                         <connections>
-                                            <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kE-mk-JRN"/>
-                                            <segue destination="jVe-Zc-jgf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3Ex-Pk-xVK"/>
+                                            <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlQ-RQ-7OS"/>
+                                            <segue destination="jVe-Zc-jgf" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3Ex-Pk-xVK"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-67-f2t" userLabel="reminderButtonsStack">
@@ -115,27 +121,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-yz-cI7">
-                                <rect key="frame" x="117.5" y="266" width="92" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-yz-cI7">
+                                <rect key="frame" x="110" y="262" width="100" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="Log out!"/>
                                 <connections>
                                     <segue destination="Y6p-NR-02F" kind="unwind" unwindAction="unwindFor:" id="A2B-4A-2wk"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-sY-hgb">
-                                <rect key="frame" x="16" y="141" width="288" height="58"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-sY-hgb">
+                                <rect key="frame" x="16" y="127.5" width="288" height="74.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77l-0z-PRh">
-                                        <rect key="frame" x="123.5" y="0.0" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77l-0z-PRh">
+                                        <rect key="frame" x="122" y="0.0" width="44.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-RH-kkt">
-                                        <rect key="frame" x="123.5" y="37.5" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-RH-kkt">
+                                        <rect key="frame" x="126.5" y="37.5" width="35" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -145,11 +150,17 @@
                         <viewLayoutGuide key="safeArea" id="l3v-ns-NcQ"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
+                            <constraint firstItem="VDr-yz-cI7" firstAttribute="top" secondItem="pUY-sY-hgb" secondAttribute="bottom" constant="60" id="5hm-6Y-wwu"/>
                             <constraint firstItem="l3v-ns-NcQ" firstAttribute="trailing" secondItem="pUY-sY-hgb" secondAttribute="trailing" constant="16" id="JNm-hS-sqc"/>
+                            <constraint firstItem="VDr-yz-cI7" firstAttribute="centerY" secondItem="cUZ-4q-UJ3" secondAttribute="centerY" id="Jwo-sj-t9W"/>
+                            <constraint firstItem="VDr-yz-cI7" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="eeg-ZQ-RAY"/>
                             <constraint firstItem="pUY-sY-hgb" firstAttribute="leading" secondItem="l3v-ns-NcQ" secondAttribute="leading" constant="16" id="uKL-ob-CEK"/>
                             <constraint firstItem="pUY-sY-hgb" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="xuL-S9-wBc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingUserLabel" destination="77l-0z-PRh" id="Yos-ht-ugZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6T-eP-vhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Y6p-NR-02F" userLabel="Exit" sceneMemberID="exit"/>
