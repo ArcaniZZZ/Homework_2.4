@@ -9,18 +9,7 @@ struct User {
     var login: String?
     var password: String?
     var person: Person?
-    
-    static func getUserAlex() -> User {
-        return User(
-            login: "Username",
-            password: "Password",
-            person: Person(
-            fullName: "AlexZ",
-            CV: "Hi! I'm a 30 y.o. lawyer from Russia who wishes to become a software engineer",
-            significantOthersFullName: "Mercedes",
-            significantOthersCV: "Mercedes is a young indie photographer",
-            petsName: "Balu and Odyssey"))
-    }
+
 }
 
 struct Person {

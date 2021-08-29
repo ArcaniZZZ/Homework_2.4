@@ -125,20 +125,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMAGE 2021-08-27 20:00:44" translatesAutoresizingMaskIntoConstraints="NO" id="bm0-hW-U9c">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Kb-tDe">
-                                <rect key="frame" x="102.5" y="206.5" width="115" height="155"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Kb-tDe">
+                                <rect key="frame" x="16" y="206.5" width="288" height="155"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-sY-hgb">
-                                        <rect key="frame" x="19" y="0.0" width="77" height="89"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-sY-hgb">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="89"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77l-0z-PRh">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-RH-kkt">
-                                                <rect key="frame" x="21.5" y="53" width="34" height="36"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-RH-kkt">
+                                                <rect key="frame" x="0.0" y="53" width="288" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-yz-cI7">
-                                        <rect key="frame" x="0.0" y="107" width="115" height="48"/>
+                                        <rect key="frame" x="0.0" y="107" width="288" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <state key="normal" title="Log out!"/>
                                         <connections>
@@ -163,6 +163,8 @@
                             <constraint firstItem="eVE-Kb-tDe" firstAttribute="centerY" secondItem="cUZ-4q-UJ3" secondAttribute="centerY" id="4Ob-Ye-cjg"/>
                             <constraint firstItem="bm0-hW-U9c" firstAttribute="top" secondItem="l3v-ns-NcQ" secondAttribute="top" id="CVC-ge-C84"/>
                             <constraint firstItem="bm0-hW-U9c" firstAttribute="trailing" secondItem="l3v-ns-NcQ" secondAttribute="trailing" id="EZ5-2z-S8b"/>
+                            <constraint firstItem="eVE-Kb-tDe" firstAttribute="leading" secondItem="l3v-ns-NcQ" secondAttribute="leading" constant="16" id="HrI-kg-mmc"/>
+                            <constraint firstItem="l3v-ns-NcQ" firstAttribute="trailing" secondItem="eVE-Kb-tDe" secondAttribute="trailing" constant="16" id="QJu-HO-paD"/>
                             <constraint firstItem="bm0-hW-U9c" firstAttribute="leading" secondItem="l3v-ns-NcQ" secondAttribute="leading" id="cb3-Iy-Y0Z"/>
                             <constraint firstItem="eVE-Kb-tDe" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="nOd-lD-jsQ"/>
                         </constraints>
@@ -234,6 +236,8 @@
                         <barButtonItem key="rightBarButtonItem" title="More!" id="SkX-Ne-h5R"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="aboutMe" destination="e2u-fB-sF8" id="wNQ-hJ-YVU"/>
+                        <outlet property="bioLabel" destination="e2u-fB-sF8" id="60d-rh-XXj"/>
                         <segue destination="S18-lg-Ggs" kind="show" identifier="AboutMe" id="fk0-rn-a4v"/>
                     </connections>
                 </viewController>
@@ -326,7 +330,7 @@
         <!--About You!-->
         <scene sceneID="fPo-7n-dDM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xvP-fs-EIP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xvP-fs-EIP" customClass="NavigationBarViewController" customModule="Homework_2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About You!" image="person.fill" catalog="system" id="PSD-ME-zxN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qDe-yW-UtC">

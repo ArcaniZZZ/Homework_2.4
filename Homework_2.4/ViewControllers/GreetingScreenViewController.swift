@@ -71,7 +71,6 @@ extension GreetingScreenViewController {
             button.contentEdgeInsets = contentInsets
             button.titleLabel?.minimumScaleFactor = 0.5
             button.titleLabel?.adjustsFontSizeToFitWidth = true
-            
         }
     }
 }

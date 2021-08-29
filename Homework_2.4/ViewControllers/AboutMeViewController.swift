@@ -7,6 +7,15 @@
 
 import UIKit
 
-class AboutMeViewController: UITabBarController {
-
+class AboutMeViewController: UIViewController {
+    
+    @IBOutlet var aboutMe: UILabel!
+    
+    var cv: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        aboutMe.text = cv
+    }
 }

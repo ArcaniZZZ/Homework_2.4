@@ -19,7 +19,15 @@ class LoginPageViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    let alexZUser = User.getUserAlex()
+    let alexZuser = User(
+        login: "Username",
+        password: "Password",
+        person: Person(
+        fullName: "AlexZ",
+        CV: "Hi! I'm a 30 y.o. lawyer from Russia who wishes to become a software engineer",
+        significantOthersFullName: "Mercedes",
+        significantOthersCV: "Mercedes is a young indie photographer",
+        petsName: "Balu"))
     
     // MARK: - Overriden functions
     override func viewDidLayoutSubviews() {
@@ -29,37 +37,36 @@ class LoginPageViewController: UIViewController {
                             remindPasswordButton)
     }
 
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let tabBarController = segue.destination as! UITabBarController
-    guard let viewControllers = tabBarController.viewControllers else { return }
-    for viewController in viewControllers {
-        if let greetingsVC = viewController as? GreetingScreenViewController {
-            guard greetingsVC.username == alexZUser.person?.fullName else { return }
-            else if let navigationVC = viewController as? UINavigationController {
-                let aboutmeVC = navigationVC.topViewController as! AboutMeViewController {
-                    
-            }
-            }
-                        
-                        aboutMeVC = viewController as? AboutMeViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let tabBarController = segue.destination as! TabBarViewController
+        
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            
+            if let greetingsVC = viewController as? GreetingScreenViewController {
                 
+                guard let username = alexZuser.person?.fullName else { return }
+                
+                greetingsVC.username = username
+            }
+            else if let navigationVC = viewController as? NavigationBarViewController {
+
+                let aboutmeVC = navigationVC.topViewController as! AboutMeViewController
+                
+                guard let cv = alexZuser.person?.CV else { return }
+                
+                aboutmeVC.cv = cv
             }
         }
     }
-}
-            
-//            loggedInVc = segue.destination as? GreetingScreenViewController
-//        else {
-//            return
-//        }
-//        loggedInVc.username = login
-//    }
-//
+    
     // MARK: - IB Actions
     @IBAction func loginButtonPressed() {
         guard
-            loginField.text == alexZUser.login &&
-            passwordField.text == alexZUser.password
+            loginField.text == alexZuser.login &&
+            passwordField.text == alexZuser.password
         else {
             wrongEntry()
             return
