@@ -122,9 +122,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMAGE 2021-08-27 20:00:44" id="bm0-hW-U9c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMAGE 2021-08-27 20:00:44" translatesAutoresizingMaskIntoConstraints="NO" id="bm0-hW-U9c">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-Kb-tDe">
                                 <rect key="frame" x="102.5" y="206.5" width="115" height="155"/>
@@ -160,7 +159,11 @@
                         <viewLayoutGuide key="safeArea" id="l3v-ns-NcQ"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bm0-hW-U9c" secondAttribute="bottom" id="15S-4f-sUj"/>
                             <constraint firstItem="eVE-Kb-tDe" firstAttribute="centerY" secondItem="cUZ-4q-UJ3" secondAttribute="centerY" id="4Ob-Ye-cjg"/>
+                            <constraint firstItem="bm0-hW-U9c" firstAttribute="top" secondItem="l3v-ns-NcQ" secondAttribute="top" id="CVC-ge-C84"/>
+                            <constraint firstItem="bm0-hW-U9c" firstAttribute="trailing" secondItem="l3v-ns-NcQ" secondAttribute="trailing" id="EZ5-2z-S8b"/>
+                            <constraint firstItem="bm0-hW-U9c" firstAttribute="leading" secondItem="l3v-ns-NcQ" secondAttribute="leading" id="cb3-Iy-Y0Z"/>
                             <constraint firstItem="eVE-Kb-tDe" firstAttribute="centerX" secondItem="cUZ-4q-UJ3" secondAttribute="centerX" id="nOd-lD-jsQ"/>
                         </constraints>
                     </view>
@@ -175,12 +178,13 @@
             </objects>
             <point key="canvasLocation" x="1721" y="78"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="h9H-Op-g6H">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nXy-oo-EF9" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nXy-oo-EF9" customClass="TabBarViewController" customModule="Homework_2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iyK-dl-0oC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -196,10 +200,16 @@
         <!--Who are you?-->
         <scene sceneID="DPY-NF-eVs">
             <objects>
-                <viewController id="bKn-98-uS5" sceneMemberID="viewController">
+                <viewController id="bKn-98-uS5" customClass="AboutMeViewController" customModule="Homework_2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWC-oA-joQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePa-30-E2t">
+                                <rect key="frame" x="80" y="221" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0Wm-nO-HNS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

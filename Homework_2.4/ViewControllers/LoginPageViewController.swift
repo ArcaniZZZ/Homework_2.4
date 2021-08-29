@@ -18,9 +18,9 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var remindPasswordButton: UIButton!
     
     // MARK: - Private Properties
-    private let password = "Password"
-    private let login = "Username"
-        
+    
+    let alexZUser = User.getUserAlex()
+    
     // MARK: - Overriden functions
     override func viewDidLayoutSubviews() {
         makeTheButtonNice(buttons:
@@ -28,18 +28,30 @@ class LoginPageViewController: UIViewController {
                             remindUsernameButton,
                             remindPasswordButton)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loggedInVc = segue.destination as? GreetingScreenViewController
-        else {
-            return
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let tabBarController = segue.destination as! UITabBarController
+    guard let viewControllers = tabBarController.viewControllers else { return }
+    for viewController in viewControllers {
+        if let greetingsVC = viewController as? GreetingScreenViewController {
+            guard greetingsVC.username == alexZUser.person?.fullName else { return }
+            
         }
-        loggedInVc.username = login
     }
-    
+}
+            
+//            loggedInVc = segue.destination as? GreetingScreenViewController
+//        else {
+//            return
+//        }
+//        loggedInVc.username = login
+//    }
+//
     // MARK: - IB Actions
     @IBAction func loginButtonPressed() {
-            guard loginField.text == login && passwordField.text == password
+        guard
+            loginField.text == alexZUser.login &&
+            passwordField.text == alexZUser.password
         else {
             wrongEntry()
             return
@@ -101,7 +113,6 @@ extension LoginPageViewController {
             button.contentEdgeInsets = contentInsets
             button.titleLabel?.minimumScaleFactor = 0.5
             button.titleLabel?.adjustsFontSizeToFitWidth = true
-            
         }
     }
 }
