@@ -15,7 +15,6 @@ struct User {
 struct Person {
     let fullName: String?
     let CV: String?
-    let significantOthersFullName: String?
     let significantOthersCV: String?
     let petsName: String?
 }

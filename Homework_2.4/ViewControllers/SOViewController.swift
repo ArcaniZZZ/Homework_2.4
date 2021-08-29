@@ -15,8 +15,10 @@ class SOViewController: UIViewController {
     var petsName: String!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let petVC = segue.destination as? PetViewController,
               let petName = petsName else { return }
+        
         petVC.pet = petName
     }
     
