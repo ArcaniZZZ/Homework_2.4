@@ -35,7 +35,15 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     for viewController in viewControllers {
         if let greetingsVC = viewController as? GreetingScreenViewController {
             guard greetingsVC.username == alexZUser.person?.fullName else { return }
-            
+            else if let navigationVC = viewController as? UINavigationController {
+                let aboutmeVC = navigationVC.topViewController as! AboutMeViewController {
+                    
+            }
+            }
+                        
+                        aboutMeVC = viewController as? AboutMeViewController {
+                
+            }
         }
     }
 }
