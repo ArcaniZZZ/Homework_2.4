@@ -11,6 +11,7 @@
 		EA3EA49D26DBAFC000DF878A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA49C26DBAFC000DF878A /* TabBarViewController.swift */; };
 		EA3EA4A326DBE97C00DF878A /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A226DBE97C00DF878A /* NavigationBarViewController.swift */; };
 		EA3EA4A526DBF76700DF878A /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A426DBF76700DF878A /* AboutMeViewController.swift */; };
+		EA3EA4A726DC016500DF878A /* SOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A626DC016500DF878A /* SOViewController.swift */; };
 		EA65725126D940F80096AFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65725026D940F80096AFBD /* AppDelegate.swift */; };
 		EA65725326D940F80096AFBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65725226D940F80096AFBD /* SceneDelegate.swift */; };
 		EA65725526D940F80096AFBD /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65725426D940F80096AFBD /* LoginPageViewController.swift */; };
@@ -25,6 +26,7 @@
 		EA3EA49C26DBAFC000DF878A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EA3EA4A226DBE97C00DF878A /* NavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
 		EA3EA4A426DBF76700DF878A /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		EA3EA4A626DC016500DF878A /* SOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOViewController.swift; sourceTree = "<group>"; };
 		EA65724D26D940F80096AFBD /* Homework_2.4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework_2.4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA65725026D940F80096AFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA65725226D940F80096AFBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				EA65725426D940F80096AFBD /* LoginPageViewController.swift */,
-				EA3EA4A426DBF76700DF878A /* AboutMeViewController.swift */,
 				EAC58B7C26DA76190052C549 /* GreetingScreenViewController.swift */,
+				EA3EA4A426DBF76700DF878A /* AboutMeViewController.swift */,
+				EA3EA4A626DC016500DF878A /* SOViewController.swift */,
 				EA3EA49C26DBAFC000DF878A /* TabBarViewController.swift */,
 				EA3EA4A226DBE97C00DF878A /* NavigationBarViewController.swift */,
 			);
@@ -199,6 +202,7 @@
 				EA65725126D940F80096AFBD /* AppDelegate.swift in Sources */,
 				EA3EA49726DB933200DF878A /* User.swift in Sources */,
 				EA3EA49D26DBAFC000DF878A /* TabBarViewController.swift in Sources */,
+				EA3EA4A726DC016500DF878A /* SOViewController.swift in Sources */,
 				EA65725326D940F80096AFBD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

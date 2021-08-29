@@ -15,7 +15,7 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         aboutMe.text = cv
     }
+    
 }
