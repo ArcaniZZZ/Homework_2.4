@@ -9,9 +9,12 @@ import UIKit
 
 class PetViewController: UIViewController {
     
+    @IBOutlet var petsName: UILabel!
+    
     var pet: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        petsName.text = pet
     }
-     
+}
