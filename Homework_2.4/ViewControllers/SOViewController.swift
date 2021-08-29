@@ -9,10 +9,13 @@ import UIKit
 
 class SOViewController: UIViewController {
     
+    @IBOutlet var girlfriendsCV: UILabel!
+    
+    var gfCV: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        girlfriendsCV.text = gfCV
         
     }
 }

@@ -26,7 +26,7 @@ class LoginPageViewController: UIViewController {
         fullName: "AlexZ",
         CV: "Hi! I'm a 30 y.o. lawyer from Russia who wishes to become a software engineer.",
         significantOthersFullName: "Mercedes",
-        significantOthersCV: "Mercedes is a young indie photographer",
+        significantOthersCV: "Mercedes is a young indie photographer.",
         petsName: "Balu"))
     
     // MARK: - Overriden functions
@@ -52,12 +52,18 @@ class LoginPageViewController: UIViewController {
                 greetingsVC.username = username
             }
             else if let navigationVC = viewController as? NavigationBarViewController {
-
+                
                 let aboutmeVC = navigationVC.topViewController as! AboutMeViewController
                 
                 guard let cv = alexZuser.person?.CV else { return }
                 
                 aboutmeVC.cv = cv
+                
+                let significantOtherVC = navigationVC.viewControllers[2] as! SOViewController
+                                
+                guard let cv = alexZuser.person?.significantOthersCV else { return }
+                
+                significantOtherVC.gfCV = cv
             }
         }
     }
