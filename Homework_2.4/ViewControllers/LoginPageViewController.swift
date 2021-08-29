@@ -17,9 +17,9 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var remindUsernameButton: UIButton!
     @IBOutlet var remindPasswordButton: UIButton!
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
     
-    let alexZuser = User(
+    public let alexZuser = User(
         login: "Username",
         password: "Password",
         person: Person(
@@ -39,31 +39,19 @@ class LoginPageViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let tabBarController = segue.destination as! TabBarViewController
-        
-        guard let viewControllers = tabBarController.viewControllers else { return }
+        guard let tabBarController = segue.destination as? TabBarViewController,
+              let viewControllers = tabBarController.viewControllers else { return }
         
         for viewController in viewControllers {
             
-            if let greetingsVC = viewController as? GreetingScreenViewController {
-                
-                guard let username = alexZuser.person?.fullName else { return }
-                
+            if let greetingsVC = viewController as? GreetingScreenViewController,
+               let username = alexZuser.person?.fullName {
                 greetingsVC.username = username
-            }
-            else if let navigationVC = viewController as? NavigationBarViewController {
+            } else if let navigationVC = viewController as? NavigationBarViewController,
+                      let aboutmeVC = navigationVC.topViewController as? AboutMeViewController,
+                      let alexZperson = alexZuser.person {
                 
-                let aboutmeVC = navigationVC.topViewController as! AboutMeViewController
-                
-                guard let cv = alexZuser.person?.CV else { return }
-                
-                aboutmeVC.cv = cv
-                
-                let significantOtherVC = navigationVC.viewControllers[2] as! SOViewController
-                                
-                guard let cv = alexZuser.person?.significantOthersCV else { return }
-                
-                significantOtherVC.gfCV = cv
+                aboutmeVC.person = alexZperson
             }
         }
     }
