@@ -15,6 +15,6 @@ class PetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        petsName.text = pet
+        petsName.text = "These are" + " " + pet + "!"
     }
 }

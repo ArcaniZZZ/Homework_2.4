@@ -27,7 +27,7 @@ class LoginPageViewController: UIViewController {
         CV: "Hi! I'm a 30 y.o. lawyer from Russia who wishes to become a software engineer.",
         significantOthersFullName: "Mercedes",
         significantOthersCV: "Mercedes is a young indie photographer.",
-        petsName: "Balu"))
+        petsName: "Balu and Odyssey"))
     
     // MARK: - Overriden functions
     override func viewDidLayoutSubviews() {
