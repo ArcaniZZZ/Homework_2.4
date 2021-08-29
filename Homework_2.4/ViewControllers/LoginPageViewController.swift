@@ -47,7 +47,7 @@ class LoginPageViewController: UIViewController {
             if let greetingsVC = viewController as? GreetingScreenViewController,
                let username = alexZuser.person?.fullName {
                 greetingsVC.username = username
-            } else if let navigationVC = viewController as? NavigationBarViewController,
+            } else if let navigationVC = viewController as? UINavigationController,
                       let aboutmeVC = navigationVC.topViewController as? AboutMeViewController,
                       let alexZperson = alexZuser.person {
                 

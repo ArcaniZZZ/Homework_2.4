@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA3EA49726DB933200DF878A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA49626DB933200DF878A /* User.swift */; };
 		EA3EA49D26DBAFC000DF878A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA49C26DBAFC000DF878A /* TabBarViewController.swift */; };
-		EA3EA4A326DBE97C00DF878A /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A226DBE97C00DF878A /* NavigationBarViewController.swift */; };
 		EA3EA4A526DBF76700DF878A /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A426DBF76700DF878A /* AboutMeViewController.swift */; };
 		EA3EA4A726DC016500DF878A /* SOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A626DC016500DF878A /* SOViewController.swift */; };
 		EA3EA4A926DC1DCA00DF878A /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EA4A826DC1DCA00DF878A /* PetViewController.swift */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		EA3EA49626DB933200DF878A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EA3EA49C26DBAFC000DF878A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		EA3EA4A226DBE97C00DF878A /* NavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
 		EA3EA4A426DBF76700DF878A /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		EA3EA4A626DC016500DF878A /* SOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOViewController.swift; sourceTree = "<group>"; };
 		EA3EA4A826DC1DCA00DF878A /* PetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				EA3EA4A626DC016500DF878A /* SOViewController.swift */,
 				EA3EA4A826DC1DCA00DF878A /* PetViewController.swift */,
 				EA3EA49C26DBAFC000DF878A /* TabBarViewController.swift */,
-				EA3EA4A226DBE97C00DF878A /* NavigationBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,7 +195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA3EA4A326DBE97C00DF878A /* NavigationBarViewController.swift in Sources */,
 				EA65725526D940F80096AFBD /* LoginPageViewController.swift in Sources */,
 				EA3EA4A526DBF76700DF878A /* AboutMeViewController.swift in Sources */,
 				EAC58B7D26DA76190052C549 /* GreetingScreenViewController.swift in Sources */,
